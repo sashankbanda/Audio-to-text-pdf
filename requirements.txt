@@ -9,4 +9,4 @@ eventlet==0.33.0
 gunicorn==20.1.0
 torch==2.0.1  
 soundfile==0.12.1
-pip install flask-cors
+flask-cors
