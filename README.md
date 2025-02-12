@@ -47,7 +47,7 @@ audio-transcription-app/
 │   ├── src/  
 │   │   ├── App.js          # React UI  
 │   │   ├── styles.css      # Styling  
-│   │   ├── index.js        # React Root Component  
+│   │   ├── script.js        # React Root Component  
 │── README.md               # Project Documentation  
 │── .gitignore              # Ignore unnecessary files  
 │── package.json            # React dependencies  
