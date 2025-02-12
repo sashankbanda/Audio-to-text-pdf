@@ -123,7 +123,14 @@ npm start
 
 ## 🖼️ Screenshots (Optional)  
 _Add relevant screenshots here to showcase the UI and functionality._  
+1.
+![alt text](image.png)
 
+2.
+![alt text](image-1.png)
+
+3.
+![alt text](image-2.png)
 ---
 
 ## ❌ Troubleshooting  
