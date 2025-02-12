@@ -122,14 +122,14 @@ npm start
 ---
 
 ## 🖼️ Screenshots (Optional)  
-_Add relevant screenshots here to showcase the UI and functionality._  
-1.
+_Relevant screenshots here to showcase the UI and functionality._  
+1. Inital
 ![alt text](image.png)
 
-2.
+2. In the Process
 ![alt text](image-1.png)
 
-3.
+3. Final Pdf
 ![alt text](image-2.png)
 ---
 
