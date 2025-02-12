@@ -1,7 +1,7 @@
 # 🎤 Audio Transcription App  
-Convert audio files to text using AI-powered transcription.  
+Seamlessly convert audio files into text using AI-powered transcription.  
 
-This project uses **Flask (Python) as the backend** and **React.js as the frontend** to provide real-time transcription of audio files.  
+This project leverages **Flask (Python) as the backend** and **React.js as the frontend** to provide real-time transcription of audio files with an intuitive user experience.  
 
 ---
 
@@ -19,11 +19,12 @@ This project uses **Flask (Python) as the backend** and **React.js as the fronte
 ---
 
 ## 🔹 Features  
-✅ Upload and process audio files (MP3, WAV, etc.)  
+✅ Upload and process various audio formats (MP3, WAV, etc.)  
 ✅ Converts **speech to text** using **OpenAI Whisper**  
-✅ Displays **real-time progress updates**  
-✅ **Responsive UI** built with **React.js**  
-✅ Supports **various audio formats**  
+✅ Displays **real-time transcription progress**  
+✅ **Responsive UI** powered by **React.js**  
+✅ Supports **multiple languages and accents**  
+✅ Uses **Server-Sent Events (SSE)** for seamless updates  
 
 ---
 
@@ -36,8 +37,22 @@ This project uses **Flask (Python) as the backend** and **React.js as the fronte
 ---
 
 ## 📂 Project Structure  
-audio-transcription-app/ │── backend/ # Flask Backend │ ├── app.py # Main Flask App │ ├── uploads/ # Stores uploaded audio files │ ├── requirements.txt # Backend dependencies │── frontend/ # React Frontend │ ├── src/ │ │ ├── App.js # React UI │ │ ├── styles.css # Styling │ │ ├── index.js # React Root Component │── README.md # Project Documentation │── .gitignore # Ignore unnecessary files │── package.json # React dependencies │── requirements.txt # Python dependencies
-
+```
+audio-transcription-app/  
+│── backend/                # Flask Backend  
+│   ├── app.py              # Main Flask App  
+│   ├── uploads/            # Stores uploaded audio files  
+│   ├── requirements.txt    # Backend dependencies  
+│── frontend/               # React Frontend  
+│   ├── src/  
+│   │   ├── App.js          # React UI  
+│   │   ├── styles.css      # Styling  
+│   │   ├── index.js        # React Root Component  
+│── README.md               # Project Documentation  
+│── .gitignore              # Ignore unnecessary files  
+│── package.json            # React dependencies  
+│── requirements.txt        # Python dependencies  
+```
 
 ---
 
@@ -48,86 +63,76 @@ audio-transcription-app/ │── backend/ # Flask Backend │ ├── app.py
 git clone https://github.com/your-username/audio-transcription-app.git
 cd audio-transcription-app
 ```
-🔹 2️⃣ Backend Setup (Flask)
-📌 Install Python dependencies (Ensure Python 3.x is installed):
 
+### 🔹 2️⃣ Backend Setup (Flask)  
+📌 Install Python dependencies (Ensure Python 3.x is installed):  
 ```sh
 cd backend
 pip install -r requirements.txt
 ```
-📌 Run Flask server:
+📌 Run Flask server:  
 ```sh
 python app.py
 ```
-By default, the server runs at:
-📍 http://localhost:5000
+By default, the server runs at:  
+📍 **http://localhost:5000**  
 
-🔹 3️⃣ Frontend Setup (React)
-📌 Install Node.js dependencies:
+### 🔹 3️⃣ Frontend Setup (React)  
+📌 Install Node.js dependencies:  
 ```sh
 cd frontend
 npm install
 ```
-📌 Start React app:
+📌 Start React app:  
 ```sh
 npm start
 ```
-Frontend will be available at:
-📍 http://localhost:3000
+By default, the React app runs at:  
+📍 **http://localhost:3000**  
 
-▶️ How to Execute (Step-by-Step)
-✅ For Absolute Beginners
-🔵 Step 1: Install Python and Node.js
+---
 
-Install Python 3.x from python.org
-Install Node.js from nodejs.org
-🔵 Step 2: Open Terminal/Command Prompt
-Navigate to the project folder:
-```sh
-cd audio-transcription-app
-```
-🔵 Step 3: Start the Backend (Flask)
+## ▶️ How to Execute (Step-by-Step)  
+1️⃣ Start the Flask backend:  
 ```sh
 cd backend
-pip install -r requirements.txt
 python app.py
 ```
-👉 You should see "Running on http://127.0.0.1:5000/"
-
-🔵 Step 4: Start the Frontend (React)
+2️⃣ Start the React frontend:  
 ```sh
 cd frontend
-npm install
 npm start
 ```
-👉 You should see the React app running in your browser.
+3️⃣ Open **http://localhost:3000** in your browser.  
+4️⃣ Upload an audio file and watch real-time transcription.  
 
-🔵 Step 5: Upload an audio file and check the transcription result!
+---
 
-🛠 API Endpoints
-Endpoint	Method	Description
-/upload	POST	Uploads an audio file for transcription
-/progress	GET	Fetches real-time progress updates
+## 🛠 API Endpoints  
+| Method | Endpoint       | Description                      |  
+|--------|---------------|----------------------------------|  
+| POST   | `/upload`     | Uploads an audio file           |  
+| GET    | `/transcribe` | Fetches real-time transcription |  
 
-📷 Screenshots (Optional)
+---
 
-(Replace with actual screenshots of your app in action!)
+## 📷 Screenshots (Optional)  
+_Add relevant screenshots here to showcase the UI and functionality._  
 
-❌ Troubleshooting
-🔹 Backend Issues
-Error: ModuleNotFoundError: No module named 'flask'
-✅ Run: pip install -r requirements.txt
-Port Already in Use (5000)?
-✅ Run: kill -9 $(lsof -t -i:5000) (Linux/Mac)
-✅ Run: taskkill /F /IM python.exe (Windows)
-🔹 Frontend Issues
-npm start Fails?
-✅ Run: npm install again
-CORS Error?
-✅ Ensure Flask server is running before React
-📜 License
-🔓 Open-source project under MIT License
+---
 
+## ❌ Troubleshooting  
+💡 **Issue:** Flask API not starting  
+✔️ Ensure Python is installed and dependencies are installed via `pip install -r requirements.txt`  
 
-This guide makes it **super beginner-friendly** while still detailed for advanced users. 🚀🔥
+💡 **Issue:** React app fails to start  
+✔️ Run `npm install` before executing `npm start`  
+
+---
+
+## 📜 License  
+This project is licensed under the [MIT License](LICENSE).  
+
+---
+
 Made with ❤️ by **Sashank Banda**
