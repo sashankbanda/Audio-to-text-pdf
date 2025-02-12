@@ -10,9 +10,9 @@ This project leverages **Flask (Python) as the backend** and **React.js as the f
 - [🚀 Tech Stack](#-tech-stack)  
 - [📂 Project Structure](#-project-structure)  
 - [💻 Installation](#-installation)  
-- [▶️ How to Execute (Step-by-Step)](#-how-to-execute-step-by-step)  
+- [▶️ How to Execute (Step-by-Step)](#%EF%B8%8F-how-to-execute-step-by-step)  
 - [🛠 API Endpoints](#-api-endpoints)  
-- [🖼️ Screenshots (Optional)](#-screenshots-optional)  
+- [🖼️ Screenshots (Optional)](#%EF%B8%8F-screenshots-optional)  
 - [❌ Troubleshooting](#-troubleshooting)  
 - [📝 License](#-license)  
 
