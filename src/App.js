@@ -7,6 +7,7 @@ const App = () => {
     const [progressStatus, setProgressStatus] = useState("Waiting for file upload...");
     const [transcription, setTranscription] = useState("");
     const [updates, setUpdates] = useState("");
+    const [pdfUrl, setPdfUrl] = useState("");
 
     useEffect(() => {
         const eventSource = new EventSource("http://localhost:5000/progress");
@@ -26,6 +27,7 @@ const App = () => {
 
         setProgressStatus("Uploading...");
         setProgress(10);
+        setPdfUrl("");
 
         const formData = new FormData();
         formData.append("file", file);
@@ -42,6 +44,7 @@ const App = () => {
             setProgress(100);
             setProgressStatus("Processing complete!");
             setTranscription(response.data.transcription);
+            setPdfUrl(`http://localhost:5000/download/${response.data.pdf_filename}`);
         } catch (error) {
             setProgressStatus("Error uploading file.");
             console.error("Upload Error:", error);
@@ -67,6 +70,12 @@ const App = () => {
                 <h2>Transcription Result:</h2>
                 <pre id="transcription-result">{transcription}</pre>
             </div>
+            {pdfUrl && (
+                <div id="pdf-download">
+                    <h2>Download Transcription</h2>
+                    <a href={pdfUrl} download className="download-button">Download PDF</a>
+                </div>
+            )}
         </div>
     );
 };
