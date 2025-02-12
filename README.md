@@ -1,100 +1,133 @@
-# Getting Started with Create React App
+# 🎤 Audio Transcription App  
+Convert audio files to text using AI-powered transcription.  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project uses **Flask (Python) as the backend** and **React.js as the frontend** to provide real-time transcription of audio files.  
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📖 Table of Contents  
+- [🔹 Features](#-features)  
+- [🚀 Tech Stack](#-tech-stack)  
+- [📂 Project Structure](#-project-structure)  
+- [💻 Installation](#-installation)  
+- [▶️ How to Execute (Step-by-Step)](#-how-to-execute-step-by-step)  
+- [🛠 API Endpoints](#-api-endpoints)  
+- [📷 Screenshots (Optional)](#-screenshots-optional)  
+- [❌ Troubleshooting](#-troubleshooting)  
+- [📜 License](#-license)  
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🔹 Features  
+✅ Upload and process audio files (MP3, WAV, etc.)  
+✅ Converts **speech to text** using **OpenAI Whisper**  
+✅ Displays **real-time progress updates**  
+✅ **Responsive UI** built with **React.js**  
+✅ Supports **various audio formats**  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🚀 Tech Stack  
+- **Frontend:** React.js, HTML, CSS  
+- **Backend:** Flask (Python)  
+- **AI Model:** OpenAI Whisper  
+- **Communication:** Server-Sent Events (SSE)  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📂 Project Structure  
+audio-transcription-app/ │── backend/ # Flask Backend │ ├── app.py # Main Flask App │ ├── uploads/ # Stores uploaded audio files │ ├── requirements.txt # Backend dependencies │── frontend/ # React Frontend │ ├── src/ │ │ ├── App.js # React UI │ │ ├── styles.css # Styling │ │ ├── index.js # React Root Component │── README.md # Project Documentation │── .gitignore # Ignore unnecessary files │── package.json # React dependencies │── requirements.txt # Python dependencies
 
 
+---
 
+## 💻 Installation  
 
-🔹 Changes & Improvements in app.py
-✅ Added CORS Support → CORS(app), allowing frontend access.
-✅ Improved File Handling → Removes unnecessary template rendering (React handles UI).
-✅ API Endpoints Return JSON → Better API design for React.
-✅ Real-time Progress Updates → /progress endpoint for live status tracking.
-✅ Port 5000 → Explicitly defined for better cross-origin handling with React (localhost:3000).
+### 🔹 1️⃣ Clone the Repository  
+```sh
+git clone https://github.com/your-username/audio-transcription-app.git
+cd audio-transcription-app
+```
+🔹 2️⃣ Backend Setup (Flask)
+📌 Install Python dependencies (Ensure Python 3.x is installed):
 
-🔹 Updates & Fixes in App.js
-✅ Connected to Flask API (localhost:5000/upload) for real file upload.
-✅ Added real-time progress updates using Server-Sent Events (/progress).
-✅ Displays actual transcription from the backend.
-✅ Improved UI feedback with better state management.
+```sh
+cd backend
+pip install -r requirements.txt
+```
+📌 Run Flask server:
+```sh
+python app.py
+```
+By default, the server runs at:
+📍 http://localhost:5000
 
-🔹 Key Features
-✔ Uploads audio to Flask backend (/upload).
-✔ Displays real-time progress updates using Server-Sent Events (SSE) from /progress.
-✔ Handles backend responses and updates UI dynamically.
-✔ Uses axios for HTTP requests and efficient progress tracking.
-✔ Improved UI feedback with a preformatted block (<pre>) for better readability.
-
-🔹 Next Steps
-Ensure Flask backend (app.py) is running on localhost:5000 before testing.
-Install axios in React:
-npm install axios
-Run React app:
+🔹 3️⃣ Frontend Setup (React)
+📌 Install Node.js dependencies:
+```sh
+cd frontend
+npm install
+```
+📌 Start React app:
+```sh
 npm start
+```
+Frontend will be available at:
+📍 http://localhost:3000
+
+▶️ How to Execute (Step-by-Step)
+✅ For Absolute Beginners
+🔵 Step 1: Install Python and Node.js
+
+Install Python 3.x from python.org
+Install Node.js from nodejs.org
+🔵 Step 2: Open Terminal/Command Prompt
+Navigate to the project folder:
+```sh
+cd audio-transcription-app
+```
+🔵 Step 3: Start the Backend (Flask)
+```sh
+cd backend
+pip install -r requirements.txt
+python app.py
+```
+👉 You should see "Running on http://127.0.0.1:5000/"
+
+🔵 Step 4: Start the Frontend (React)
+```sh
+cd frontend
+npm install
+npm start
+```
+👉 You should see the React app running in your browser.
+
+🔵 Step 5: Upload an audio file and check the transcription result!
+
+🛠 API Endpoints
+Endpoint	Method	Description
+/upload	POST	Uploads an audio file for transcription
+/progress	GET	Fetches real-time progress updates
+
+📷 Screenshots (Optional)
+
+(Replace with actual screenshots of your app in action!)
+
+❌ Troubleshooting
+🔹 Backend Issues
+Error: ModuleNotFoundError: No module named 'flask'
+✅ Run: pip install -r requirements.txt
+Port Already in Use (5000)?
+✅ Run: kill -9 $(lsof -t -i:5000) (Linux/Mac)
+✅ Run: taskkill /F /IM python.exe (Windows)
+🔹 Frontend Issues
+npm start Fails?
+✅ Run: npm install again
+CORS Error?
+✅ Ensure Flask server is running before React
+📜 License
+🔓 Open-source project under MIT License
+
+
+This guide makes it **super beginner-friendly** while still detailed for advanced users. 🚀🔥
+Made with ❤️ by **Sashank Banda**
