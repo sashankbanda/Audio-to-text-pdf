@@ -1,0 +1,90 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 20px;
+    text-align: center;
+}
+
+/* Heading */
+h1, h2 {
+    color: white;
+}
+
+/* Upload Form */
+#upload-form {
+    margin-top: 20px;
+}
+
+button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: darkred;
+}
+
+/* Progress Container */
+#progress-container {
+    margin-top: 20px;
+}
+
+#upload-progress {
+    width: 100%;
+    margin-top: 10px;
+    height: 20px; /* Adjust the height as needed */
+    border-radius: 10px; /* Rounded ends */
+    background-color: #555; /* Background color when empty */
+    appearance: none; /* Remove browser-specific styling */
+}
+
+#upload-progress::-webkit-progress-bar {
+    border-radius: 10px;
+    background-color: #555;
+}
+
+#upload-progress::-webkit-progress-value {
+    border-radius: 10px;
+    background-color: blue; /* Default color for the bar */
+    transition: width 0.4s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+#upload-progress::-moz-progress-bar {
+    border-radius: 10px;
+    background-color: blue; /* Default color for the bar */
+    transition: width 0.4s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+#progress-status {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Process Updates Box */
+#transcription-box, #result-box {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+}
+
+#process-updates, #transcription-result {
+    font-family: monospace;
+    white-space: pre-line;
+    text-align: left;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    overflow-y: auto;
+    max-height: 300px;
+}
