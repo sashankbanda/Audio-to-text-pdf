@@ -56,6 +56,15 @@ const App = () => {
         const file = event.target.elements["audio-file"].files[0];
         if (!file) return;
 
+        // --- ADDED FILE SIZE CHECK ---
+        // The API limit is often around 25MB. We'll check for 25MB here.
+        const fileSizeLimit = 25 * 1024 * 1024; // 25 MB in bytes
+        if (file.size > fileSizeLimit) {
+            setProgressStatus("Error: Audio file is too large. Please upload a file smaller than 25MB.");
+            return; // Stop the function here
+        }
+        // --- END OF FILE SIZE CHECK ---
+
         setProgressStatus("Uploading file...");
         setIsProcessing(true);
         setProgress(0);
@@ -92,6 +101,7 @@ const App = () => {
             setProgressStatus("Processing complete!");
 
         } catch (error) {
+            // This will now catch other errors, like if the API is down.
             setProgressStatus("Error during transcription. Please try again.");
             console.error("API Error:", error);
         } finally {
