@@ -37,6 +37,7 @@ Seamlessly convert audio files into text using this powerful, AI-driven transcri
 - **Communication:** REST API, Server-Sent Events (SSE)
 ---
 📂 Project Structure
+```
 audio-transcription-app/
 ├── public/                 # React public assets (index.html, etc.)
 ├── src/                    # React source code
@@ -49,6 +50,9 @@ audio-transcription-app/
 ├── requirements.txt        # Backend (Python) dependencies
 ├── .gitignore              # Git ignore file
 └── README.md               # Project Documentation
+```
+
+---
 
 ## 🚀 Getting Started
 
