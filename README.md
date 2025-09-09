@@ -49,7 +49,6 @@ audio-transcription-app/
 ├── requirements.txt        # Backend (Python) dependencies
 ├── .gitignore              # Git ignore file
 └── README.md               # Project Documentation
----
 
 ## 🚀 Getting Started
 
