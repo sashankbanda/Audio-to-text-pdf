@@ -1,4 +1,3 @@
-```
 # 🎤 Audio Transcription App
 
 Seamlessly convert audio files into text using this powerful, AI-driven transcription tool. This project leverages a **Flask (Python)** backend and a **React.js** frontend in a monolithic structure to provide real-time transcription with a smooth and intuitive user experience.
@@ -42,25 +41,22 @@ Seamlessly convert audio files into text using this powerful, AI-driven transcri
 ---
 
 ## 📂 Project Structure
-```
 
 audio-transcription-app/ (Project Root)
 │
-├── public/                 \# React public assets (index.html, etc.)
-├── src/                    \# React source code
-│   ├── App.js              \# Main React component
+├── public/                 # React public assets (index.html, etc.)
+├── src/                    # React source code
+│   ├── App.js              # Main React component
 │   └── ...
 │
-├── uploads/                \# Stores uploaded audio files (created by Flask)
-├── pdfs/                   \# Stores generated PDFs (created by Flask)
+├── uploads/                # Stores uploaded audio files (created by Flask)
+├── pdfs/                   # Stores generated PDFs (created by Flask)
 │
-├── app.py                  \# Main Flask backend application
-├── package.json            \# Frontend (React) dependencies and scripts
-├── requirements.txt        \# Backend (Python) dependencies
-├── .gitignore              \# Git ignore file
-└── README.md               \# Project Documentation
-
-````
+├── app.py                  # Main Flask backend application
+├── package.json            # Frontend (React) dependencies and scripts
+├── requirements.txt        # Backend (Python) dependencies
+├── .gitignore              # Git ignore file
+└── README.md               # Project Documentation
 
 ---
 
@@ -165,4 +161,3 @@ This project is licensed under the **MIT License**.
 ---
 
 Made with ❤️ by **Sashank Banda**
-````
