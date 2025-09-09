@@ -35,20 +35,15 @@ Seamlessly convert audio files into text using this powerful, AI-driven transcri
 - **Frontend:** React.js, Axios, HTML5, CSS3
 - **AI Model:** `openai/whisper-small`
 - **Communication:** REST API, Server-Sent Events (SSE)
-
 ---
-## 📂 Project Structure
-
-audio-transcription-app/ (Project Root)
-│
+📂 Project Structure
+audio-transcription-app/
 ├── public/                 # React public assets (index.html, etc.)
 ├── src/                    # React source code
 │   ├── App.js              # Main React component
 │   └── ...
-│
 ├── uploads/                # Stores uploaded audio files (created by Flask)
 ├── pdfs/                   # Stores generated PDFs (created by Flask)
-│
 ├── app.py                  # Main Flask backend application
 ├── package.json            # Frontend (React) dependencies and scripts
 ├── requirements.txt        # Backend (Python) dependencies
