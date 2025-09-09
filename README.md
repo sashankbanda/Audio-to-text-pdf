@@ -2,8 +2,6 @@
 
 Seamlessly convert audio files into text using this powerful, AI-driven transcription tool. This project leverages a **Flask (Python)** backend and a **React.js** frontend in a monolithic structure to provide real-time transcription with a smooth and intuitive user experience.
 
-
-
 ---
 
 ## 📚 Table of Contents
@@ -38,25 +36,39 @@ Seamlessly convert audio files into text using this powerful, AI-driven transcri
 - **AI Model:** `openai/whisper-small`
 - **Communication:** REST API, Server-Sent Events (SSE)
 
----
-
-## 📂 Project Structure
+---## 📂 Project Structure
 
 audio-transcription-app/ (Project Root)
+
 │
+
 ├── public/                 # React public assets (index.html, etc.)
+
 ├── src/                    # React source code
+
 │   ├── App.js              # Main React component
+
 │   └── ...
+
 │
+
 ├── uploads/                # Stores uploaded audio files (created by Flask)
+
 ├── pdfs/                   # Stores generated PDFs (created by Flask)
+
 │
+
 ├── app.py                  # Main Flask backend application
+
 ├── package.json            # Frontend (React) dependencies and scripts
+
 ├── requirements.txt        # Backend (Python) dependencies
+
 ├── .gitignore              # Git ignore file
+
 └── README.md               # Project Documentation
+
+
 
 ---
 
@@ -132,17 +144,16 @@ You will need **two separate terminals** running in the project's root directory
 ---
 
 ## 🖼️ Screenshots
+_For these images to display correctly, ensure `image.png`, `image-1.png`, and `image-2.png` are in the root directory of your repository._
 
-*Replace these placeholders with actual screenshots of your application.*
+**1. Initial State**
+![alt text](image.png)
 
-**1. Main Upload Interface:**
-![Initial UI Screenshot](https://via.placeholder.com/600x400.png?text=Main+Upload+Interface)
+**2. In Process**
+![alt text](image-1.png)
 
-**2. Transcription in Progress:**
-![Progress UI Screenshot](https://via.placeholder.com/600x400.png?text=Transcription+In+Progress)
-
-**3. Final Transcription with PDF Download:**
-![Final Result Screenshot](https://via.placeholder.com/600x400.png?text=Final+Transcription+Result)
+**3. Final PDF**
+![alt text](image-2.png)
 
 ---
 
